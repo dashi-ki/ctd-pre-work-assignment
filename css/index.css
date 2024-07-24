@@ -3,3 +3,12 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+body {
+  background-color: #cf9999;
+}
+
+.page-section {
+  display: none;
+  background-color: white;
+}
