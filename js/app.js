@@ -1,45 +1,40 @@
+// let breedsData = [];
+let groups = {};
+let quizData = [];
+
+document.addEventListener("DOMContentLoaded", initializeApp);
+
 // TODO: confirm it's okay to use async in event listener
-document.addEventListener("DOMContentLoaded", async () => {
+async function initializeApp() {
   console.log("DOMContentLoaded");
   const dogLink = document.getElementById("breeds-link");
-  const breedsSection = document.getElementById("breeds-section");
   const quizLink = document.getElementById("quiz-link");
-  const quizSection = document.getElementById("quiz-section");
 
   dogLink.addEventListener("click", (event) => {
     event.preventDefault();
-    show("breeds");
+    switchTo("breeds");
   });
 
   quizLink.addEventListener("click", (event) => {
     event.preventDefault();
-    show("quiz");
+    switchTo("quiz");
   });
 
-  function show(section) {
-    if (section === "breeds") {
-      breedsSection.style.display = "block";
-      quizSection.style.display = "none";
-    } else {
-      breedsSection.style.display = "none";
-      quizSection.style.display = "block";
-    }
-  }
+  groups = await loadBreeds();
 
-  show("breeds");
+  console.log(groups);
+}
+
+async function loadBreeds() {
   const breedsData = await fetchBreeds();
-  const groups = prepareGroups(breedsData);
-
-  // configure breed selections
+  groups = prepareGroups(breedsData);
   populateBreedGroupButtons(groups);
 
-  // Select the first group by default
   const firstGroup = Object.keys(groups)[0];
   renderBreeds(firstGroup, groups);
   setActiveButton(firstGroup);
-
-  console.log(groups);
-});
+  return groups;
+}
 
 function renderBreeds(selected, groups) {
   console.log("renderBreeds", selected);
@@ -64,5 +59,18 @@ function populateBreedGroupButtons(groups) {
       setActiveButton(selected);
     });
     breedGroupButtonsDiv.appendChild(button);
+  }
+}
+
+function switchTo(section) {
+  const breedsSection = document.getElementById("breeds-section");
+  const quizSection = document.getElementById("quiz-section");
+
+  if (section === "breeds") {
+    breedsSection.style.display = "block";
+    quizSection.style.display = "none";
+  } else {
+    breedsSection.style.display = "none";
+    quizSection.style.display = "block";
   }
 }
