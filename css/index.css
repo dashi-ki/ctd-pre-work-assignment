@@ -5,12 +5,73 @@
 }
 
 body {
-  background-color: #cf9999;
+  background-color: #fffcf9;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  color: black;
+}
+
+header {
+  padding-top: 80px;
+  border-bottom: 1px solid #60646c;
+}
+
+header h1 {
+  /* margin: 0; */
+  font-family: "Roboto Slab", serif;
+  font-size: 3.5rem;
+  color: black;
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+header h2 {
+  /* margin: 0; */
+  font-family: "Roboto", sans-serif;
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: black;
+  padding-bottom: 80px;
+  text-align: center;
+}
+
+.menu {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  gap: 48px;
+}
+
+.menu li {
+  display: flex;
+  align-items: center;
+  /* flex: 1; Makes each li take equal space */
+  /* max-width: 200px; */
+  background-color: gray;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  padding: 1rem;
+  list-style: none;
+  margin: 0;
+}
+
+.link {
+  padding: 16px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .page-section {
   display: none;
-  background-color: white;
+  background-color: #fffcf9;
+  padding: 40px 40px;
 }
 
 #breed-list {
@@ -22,18 +83,29 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  margin: 10px;
-  padding: 10px;
-  width: 200px;
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border: 1px solid black;
+  border-radius: 16px;
+  margin: 0;
+  padding: 8px 8px 16px 8px;
+  width: 100%;
+  background-color: #fffcf9;
+  /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
 }
 
 .breed-item img {
-  border-radius: 10%;
+  border-radius: 8px;
+  width: 100%;
+  height: 200px;
   margin-bottom: 10px;
+  object-fit: cover;
+}
+
+.highlight {
+  /* font-size: 0.9rem; */
+  font-weight: 500;
+  /* text-transform: uppercase; */
+  letter-spacing: 0.08rem;
+  color: #265cb7;
 }
 
 .breed-info {
@@ -41,39 +113,44 @@ body {
 }
 
 .breed-info h4 {
-  margin: 0 0 10px 0;
-  font-size: 1.2em;
-  color: #333;
+  font-size: 1.3em;
+  font-weight: 500;
+  color: black;
+  padding-top: 8px;
 }
 
 .breed-info p {
-  margin: 5px 0;
-  font-size: 0.9em;
-  color: #666;
+  color: #60646c;
+  padding-top: 16px;
 }
 
 #breed-group-buttons {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
-  margin-bottom: 20px;
+  align-items: center; /* Center elements vertically */
+  gap: 16px;
+  margin-bottom: 40px;
 }
 
 .breed-group-button {
-  padding: 10px 20px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  background-color: #f5f5f5;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 999px;
+  background-color: #ebedf4;
+  font-family: "Roboto Slab", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 400;
+  letter-spacing: 0.08rem;
   cursor: pointer;
   transition: background-color 0.3s;
 }
 
 .breed-group-button:hover {
-  background-color: #e0e0e0;
+  background-color: #ebedf4;
 }
 
 .breed-group-button.active {
-  background-color: #ac4caf;
+  background-color: #265cb7;
   color: white;
 }
 
@@ -82,19 +159,21 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  margin: 10px;
-  padding: 10px;
-  width: 250px;
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border: 1px solid black;
+  border-radius: 16px;
+  margin: 0;
+  padding: 8px 8px 16px 8px;
+  width: 100%;
+  max-width: 500px;
+  background-color: #fffcf9;
 }
 
 .quiz-card img {
   border-radius: 8px;
-  margin-bottom: 10px;
   width: 100%;
+  height: 200px;
+  margin-bottom: 10px;
+  object-fit: cover;
 }
 
 .quiz-answers {

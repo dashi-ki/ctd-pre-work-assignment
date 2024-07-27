@@ -5,7 +5,6 @@ function createBreedItem(breed) {
   const breedImage = document.createElement("img");
   breedImage.src = `https://cdn2.thedogapi.com/images/${breed.reference_image_id}.jpg`;
   breedImage.alt = breed.name;
-  breedImage.width = 100;
 
   const breedInfo = document.createElement("div");
   breedInfo.className = "breed-info";
@@ -14,10 +13,10 @@ function createBreedItem(breed) {
   breedName.textContent = breed.name;
 
   const breedTemperament = document.createElement("p");
-  breedTemperament.textContent = `Temperament: ${breed.temperament}`;
+  breedTemperament.innerHTML = `<span class="highlight">Temperament:</span><br> ${breed.temperament}`;
 
   const breedBredFor = document.createElement("p");
-  breedBredFor.textContent = `Bred for: ${breed.bred_for}`;
+  breedBredFor.innerHTML = `<span class="highlight">Bred for:</span><br>${breed.bred_for}`;
 
   breedInfo.appendChild(breedName);
   breedInfo.appendChild(breedTemperament);
