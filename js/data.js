@@ -1,4 +1,4 @@
-console.log("breeds is loaded");
+console.log("data script loaded");
 
 function prepareGroups(breeds) {
   const groups = {};

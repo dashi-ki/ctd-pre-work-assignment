@@ -49,13 +49,27 @@
       </section>
       <section class="page-section" id="quiz-section">
         <h2>Test your knowledge</h2>
-        <div class="content">Image and Question</div>
+        <div class="content">
+          <!-- Quiz Card Template -->
+          <!-- add  style="display: none" -->
+          <div class="quiz-card" id="quiz-card-template" style="display: none">
+            <img id="quiz-image" src="" alt="Dog Image" />
+            <div class="quiz-answers">
+              <button class="quiz-button" id="answer-1"></button>
+              <button class="quiz-button" id="answer-2"></button>
+              <button class="quiz-button" id="answer-3"></button>
+            </div>
+            <p id="feedback-message"></p>
+            <button id="reload-button">Reload</button>
+          </div>
+        </div>
       </section>
     </main>
     <footer>
       <div>Footer Container</div>
     </footer>
     <script src="js/ui_builder.js"></script>
+    <script src="js/quiz.js"></script>
     <script src="js/data.js"></script>
     <script src="js/api.js"></script>
     <script src="js/app.js"></script>

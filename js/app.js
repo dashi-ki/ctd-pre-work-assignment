@@ -1,6 +1,4 @@
-// let breedsData = [];
 let groups = {};
-let quizData = [];
 
 document.addEventListener("DOMContentLoaded", initializeApp);
 
@@ -18,10 +16,12 @@ async function initializeApp() {
   quizLink.addEventListener("click", (event) => {
     event.preventDefault();
     switchTo("quiz");
+    // renderQuiz();
   });
 
   groups = await loadBreeds();
-
+  // await renderQuiz();
+  // quizData = await fetchBreedForQuiz();
   console.log(groups);
 }
 
