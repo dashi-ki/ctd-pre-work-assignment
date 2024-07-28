@@ -4,30 +4,39 @@
     <title>Home</title>
     <meta charset="UTF-8" />
 
+    <!-- Roboto Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+
     <!-- TODO: add meta tags -->
     <link rel="stylesheet" href="css/index.css" />
   </head>
   <body>
     <header>
-      <h1>Doggggsss...</h1>
+      <h1>Explore Dog Breeds</h1>
+      <h2>Learn about various dog breeds and their characteristic.</h2>
       <nav>
         <ul class="menu">
-          <li><a id="breeds-link" class="link">Dogs</a></li>
-          <li><a id="quiz-link" class="link">Quiz</a></li>
+          <li><a id="breeds-link" class="nav-link active">Breeds</a></li>
+          <li><a id="quiz-link" class="nav-link">Dog Trivia</a></li>
         </ul>
       </nav>
     </header>
     <main>
-      <section class="page-section" id="breeds-section">
-        <h2>Dog Breeds</h2>
+      <section class="page-section" id="breeds-section" style="display: block">
         <div class="content">
           <div id="breed-group-buttons">
+            <h3>Groups:</h3>
             <!-- TODO: Remove after completing styles -->
             <!-- <button class="breed-group-button" data-group="Terrier">
               Terrier
             </button> -->
           </div>
-          <ul id="breed-list">
+          <ul id="breed-list" class="card-container">
             <!-- TODO: Remove after completing styles -->
             <!-- <li class="breed-item">
               <img
@@ -48,14 +57,26 @@
         </div>
       </section>
       <section class="page-section" id="quiz-section">
-        <h2>Test your knowledge</h2>
-        <div class="content">Image and Question</div>
+        <div class="content">
+          <!-- Quiz Card Template -->
+          <!-- add  style="display: none" -->
+          <div class="quiz-card" id="quiz-card-template">
+            <img id="quiz-image" src="" alt="Dog Image" />
+            <div class="quiz-content">
+              <div class="quiz-answers">
+                <button class="quiz-button" id="answer-1"></button>
+                <button class="quiz-button" id="answer-2"></button>
+                <button class="quiz-button" id="answer-3"></button>
+              </div>
+              <p id="feedback-message"></p>
+              <button id="reload-button">Reload</button>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
-    <footer>
-      <div>Footer Container</div>
-    </footer>
     <script src="js/ui_builder.js"></script>
+    <script src="js/quiz.js"></script>
     <script src="js/data.js"></script>
     <script src="js/api.js"></script>
     <script src="js/app.js"></script>
