@@ -1,6 +1,6 @@
 ## About
 
-This project is the pre-work assignment for Advanced React class with [Code the Dream](https://codethedream.org/about/), a non-profit organization that provides tech education to people from diverse backgrounds. The goal of the project is to demonstrate the knowledge of HTML, CSS and Javascript. The [requirements](https://codethedream.org/open-adv-pre-work/) for this project were provided by Code the Dream.
+This project serves as the pre-work assignment for the Advanced React class with [Code the Dream](https://codethedream.org/about/), a non-profit organization dedicated to providing tech education to individuals from diverse backgrounds. The aim of this project is to showcase proficiency in HTML, CSS, and JavaScript.  The [requirements](https://codethedream.org/open-adv-pre-work/) were outlined by Code the Dream.
 
 
 ## Project Description
