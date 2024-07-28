@@ -5,7 +5,7 @@
 }
 
 body {
-  background-color: #fffcf9;
+  background-color: #ebedf4;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   color: black;
@@ -13,23 +13,24 @@ body {
 
 header {
   padding: 48px 0;
-  border-bottom: 1px solid #d8dbe2;
+  border-bottom: 1px solid #f3d9dd;
+  background-color: #265cb7;
 }
 
 header h1 {
   text-align: center;
-  font-family: "Roboto Slab", serif;
-  font-size: 3.5rem;
-  color: black;
+  font-family: "Roboto", serif;
+  font-size: 3.6rem;
+  color: white;
   padding-bottom: 20px;
 }
 
 header h2 {
   text-align: center;
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto", serif;
   font-size: 1.2rem;
   font-weight: 400;
-  color: black;
+  color: white;
   padding-bottom: 40px;
 }
 
@@ -47,46 +48,43 @@ header h2 {
   display: flex;
   align-items: center;
   justify-content: center;
-
   background-color: transparent;
-  border: 2px solid black;
+  border: 1px solid white;
   border-radius: 999px;
   font-size: 1rem;
   font-weight: 500;
-  color: black;
+  color: white;
 }
 
 .nav-link:hover {
-  background-color: #ebedf4;
+  background-color: #5078bd;
 }
 
 .nav-link.active {
-  background-color: #265cb7;
-  color: white;
+  background-color: white;
+  color: #265cb7;
 }
 
 .page-section {
   display: none;
-  background-color: #fffcf9;
-  padding: 24px 40px;
+  background-color: #ebedf4;
+  padding: 0;
 }
 
 #breed-group-buttons {
   display: flex;
   flex-wrap: wrap;
-  align-items: center; /* Center elements vertically */
+  align-items: center;
   gap: 16px;
-  padding-bottom: 24px;
-  margin-bottom: 40px;
-  border-bottom: 1px solid #d8dbe2;
+  padding: 24px 40px;
+  background-color: white;
 }
 
 #breed-group-buttons h3 {
-  font-family: "Roboto Slab", serif;
-  font-size: 1.2rem;
-  font-weight: 400;
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
   color: black;
-  padding-top: 8px;
   padding: 0;
 }
 
@@ -95,10 +93,10 @@ header h2 {
   border: none;
   border-radius: 999px;
   background-color: #ebedf4;
-  font-family: "Roboto Slab", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 0.9rem;
   font-weight: 400;
-  letter-spacing: 0.08rem;
+  letter-spacing: 0.05rem;
   cursor: pointer;
   transition: background-color 0.3s;
 }
@@ -114,7 +112,7 @@ header h2 {
 
 #breed-list {
   list-style-type: none;
-  padding: 0;
+  padding: 32px 40px;
 }
 
 .card-container {
@@ -130,13 +128,11 @@ header h2 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 1px solid #d8dbe2;
   border-radius: 16px;
   margin: 0;
   padding: 8px 8px 16px 8px;
   width: 100%;
-  background-color: #fffcf9;
-  /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+  background-color: #ffffff;
 }
 
 .breed-item img {
@@ -148,10 +144,8 @@ header h2 {
 }
 
 .highlight {
-  /* font-size: 0.9rem; */
   font-weight: 500;
   line-height: 28px;
-  /* text-transform: uppercase; */
   letter-spacing: 0.08rem;
   color: #265cb7;
 }
@@ -161,7 +155,6 @@ header h2 {
 }
 
 .breed-info h4 {
-  /* font-family: "Roboto Slab", serif; */
   font-size: 1.3rem;
   font-weight: 500;
   color: black;
@@ -172,7 +165,12 @@ header h2 {
   color: #5a5f66;
   padding-top: 16px;
 }
-
+.page-section-quiz {
+  display: none;
+  background-color: #ebedf4;
+  padding: 40px 0;
+  margin: 0 10%;
+}
 /* Styles for the quiz card */
 .quiz-card {
   display: flex;
@@ -180,18 +178,17 @@ header h2 {
   border: none;
   border-radius: 16px;
   margin: 0;
-  padding: 32px 48px 8px 48px;
+  padding: 8px 24px 8px 8px;
   width: 100%;
-  background-color: #fffcf9;
-  gap: 24px;
-  /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+  background-color: white;
+  gap: 32px;
 }
 
 .quiz-card img {
   flex: 1;
   border-radius: 8px;
   width: 50%;
-  height: 360px;
+  height: 380px;
   object-fit: cover;
 }
 
@@ -239,13 +236,11 @@ header h2 {
 }
 
 #reload-button {
-  /* margin-top: 20px; */
   padding: 16px 24px;
   cursor: pointer;
   width: 100%;
   border: none;
   border-radius: 999px;
-  /* background-color: transparent; */
   font-size: 1rem;
 }
 
