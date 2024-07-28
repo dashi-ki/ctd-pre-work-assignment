@@ -12,7 +12,7 @@ body {
 }
 
 header {
-  padding-top: 40px;
+  padding: 48px 0;
   border-bottom: 1px solid #d8dbe2;
 }
 
@@ -30,7 +30,7 @@ header h2 {
   font-size: 1.2rem;
   font-weight: 400;
   color: black;
-  padding-bottom: 60px;
+  padding-bottom: 40px;
 }
 
 .menu {
@@ -39,23 +39,30 @@ header h2 {
   justify-content: center;
   list-style: none;
   margin: 0;
-  gap: 48px;
+  gap: 24px;
 }
 
-.menu li {
-  display: flex;
-  align-items: center;
-  /* flex: 1; Makes each li take equal space */
-  /* max-width: 200px; */
-  background-color: gray;
-  border-radius: 999px;
-}
-
-.link {
+.nav-link {
   padding: 16px 40px;
   display: flex;
   align-items: center;
   justify-content: center;
+
+  background-color: transparent;
+  border: 2px solid black;
+  border-radius: 999px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: black;
+}
+
+.nav-link:hover {
+  background-color: #ebedf4;
+}
+
+.nav-link.active {
+  background-color: #265cb7;
+  color: white;
 }
 
 .page-section {

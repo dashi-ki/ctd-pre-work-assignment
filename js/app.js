@@ -2,7 +2,6 @@ let groups = {};
 
 document.addEventListener("DOMContentLoaded", initializeApp);
 
-// TODO: confirm it's okay to use async in event listener
 async function initializeApp() {
   console.log("DOMContentLoaded");
   const dogLink = document.getElementById("breeds-link");
@@ -10,18 +9,18 @@ async function initializeApp() {
 
   dogLink.addEventListener("click", (event) => {
     event.preventDefault();
+    setActiveLink(dogLink);
     switchTo("breeds");
   });
 
   quizLink.addEventListener("click", (event) => {
     event.preventDefault();
+    setActiveLink(quizLink);
     switchTo("quiz");
-    // renderQuiz();
   });
 
   groups = await loadBreeds();
-  // await renderQuiz();
-  // quizData = await fetchBreedForQuiz();
+  setActiveLink(dogLink);
   console.log(groups);
 }
 
@@ -33,6 +32,7 @@ async function loadBreeds() {
   const firstGroup = Object.keys(groups)[0];
   renderBreeds(firstGroup, groups);
   setActiveButton(firstGroup);
+
   return groups;
 }
 
