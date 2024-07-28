@@ -1,5 +1,2 @@
 .vscode
 .DS_Store
-
-# to protect real api key
-js/config.js
