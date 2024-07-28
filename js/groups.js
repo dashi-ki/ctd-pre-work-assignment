@@ -4,12 +4,15 @@ function prepareGroups(breeds) {
   const groups = {};
 
   breeds.forEach((breed) => {
-    const group = breed.breed_group || "Unknown";
-    if (!groups[group]) {
-      groups[group] = [];
-    }
+    // const group = breed.breed_group || "Unknown";
+    const group = breed.breed_group;
+    if (group) {
+      if (!groups[group]) {
+        groups[group] = [];
+      }
 
-    groups[group].push(breed);
+      groups[group].push(breed);
+    }
   });
 
   return groups;
