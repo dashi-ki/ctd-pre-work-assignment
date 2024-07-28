@@ -36,7 +36,7 @@ async function renderQuiz() {
     button.classList.remove("correct", "incorrect");
   });
 
-  quizCardTemplate.style.display = "block";
+  // quizCardTemplate.style.display = "block";
 
   // reloadButton.onclick = () => {
   //   handleReload();
@@ -44,7 +44,7 @@ async function renderQuiz() {
 
   // spinner animation...?
 
-  quizCardTemplate.style.display = "block";
+  quizCardTemplate.style.display = "flex";
 }
 
 function prepareQuiz(data) {

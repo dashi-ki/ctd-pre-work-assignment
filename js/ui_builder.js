@@ -16,7 +16,7 @@ function createBreedItem(breed) {
   breedTemperament.innerHTML = `<span class="highlight">Temperament:</span><br> ${breed.temperament}`;
 
   const breedBredFor = document.createElement("p");
-  breedBredFor.innerHTML = `<span class="highlight">Bred for:</span><br>${breed.bred_for}`;
+  breedBredFor.innerHTML = `<span class="highlight">Role:</span><br>${breed.bred_for}`;
 
   breedInfo.appendChild(breedName);
   breedInfo.appendChild(breedTemperament);
