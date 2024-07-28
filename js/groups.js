@@ -1,5 +1,3 @@
-console.log("groups script loaded");
-
 function prepareGroups(breeds) {
   const groups = {};
 
@@ -33,7 +31,6 @@ function populateBreedGroupButtons(groups) {
 }
 
 function renderBreeds(selected, groups) {
-  console.log("renderBreeds", selected);
   const list = document.getElementById("breed-list");
   list.innerHTML = ""; // clear current context
 

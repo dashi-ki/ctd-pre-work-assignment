@@ -13,7 +13,6 @@ const answerButtons = [
 
 async function handleQuizUpdate() {
   const data = await fetchBreedForQuiz();
-  console.log("new data", data);
   quiz = prepareQuiz(data);
   renderQuiz();
 }
@@ -49,13 +48,10 @@ function prepareQuiz(data) {
     names: names,
     groups: groups,
   };
-  console.log(quiz);
   return quiz;
 }
 
 function handleAnswer(button, selected) {
-  console.log("handle answer, correct: ", quiz.answer.name);
-  console.log("handle answer, selected: ", selected);
   if (selected === quiz.answer.name) {
     button.classList.add("correct");
   } else {

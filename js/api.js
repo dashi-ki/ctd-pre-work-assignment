@@ -1,4 +1,3 @@
-console.log("api is loaded");
 const apiKey = configApiKey;
 
 async function fetchBreeds() {

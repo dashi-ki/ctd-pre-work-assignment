@@ -3,7 +3,6 @@ let groups = {};
 document.addEventListener("DOMContentLoaded", initializeApp);
 
 async function initializeApp() {
-  console.log("DOMContentLoaded");
   const dogLink = document.getElementById("breeds-link");
   const quizLink = document.getElementById("quiz-link");
 

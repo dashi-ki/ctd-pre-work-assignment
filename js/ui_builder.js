@@ -49,7 +49,6 @@ function setActiveButton(selectedGroup) {
 
 function setActiveLink(link) {
   const links = document.querySelectorAll(".nav-link");
-  console.log("clicked", links);
   links.forEach((link) => {
     link.classList.remove("active");
   });
