@@ -1,6 +1,5 @@
 console.log("api is loaded");
-// REPLACE PLACEHOLDER WITH VALIE API KEY
-const apiKey = "live_XXXXXX";
+const apiKey = configApiKey;
 
 async function fetchBreeds() {
   try {
