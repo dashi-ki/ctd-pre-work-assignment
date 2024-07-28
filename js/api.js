@@ -1,5 +1,3 @@
-const apiKey = configApiKey;
-
 async function fetchBreeds() {
   try {
     const response = await fetch("https://api.thedogapi.com/v1/breeds", {

@@ -1,9 +1,9 @@
-const configApiKey = "live_XXX";
+const apiKey = "YOUR_API_KEY_HERE";
 
-if (configApiKey === "live_XXX") {
+if (apiKey === "YOUR_API_KEY_HERE") {
   document.body.innerHTML =
-    "<h1>Error: API key is missing!</h1><p>Please populate provided API key in config.js instead of placeholder live_XXX</p>";
+    "<h2>Error: API key is missing!</h2><br><p>Please populate provided API key in config.js instead of placeholder.</p>";
   throw new Error(
-    "API key is missing! Please populate provided API key in config.js instead of placeholder"
+    "API key is missing! Need to use valid The Dog API key in order to use the application"
   );
 }
