@@ -23,26 +23,12 @@ async function renderQuiz() {
   feedbackMessage.hidden = true;
 
   quizImage.src = quiz.answer.image;
-  // answerButtons.forEach((button, index) => {
-  //   button.textContent = quiz.names[index];
-  //   button.addEventListener("click", (event) => {
-  //     const selected = event.target.textContent;
-  //     handleAnswer(button, selected, quiz.answer.name);
-  //   });
-  // });
+
   answerButtons.forEach((button, index) => {
     button.textContent = quiz.names[index];
     button.disabled = false;
     button.classList.remove("correct", "incorrect");
   });
-
-  // quizCardTemplate.style.display = "block";
-
-  // reloadButton.onclick = () => {
-  //   handleReload();
-  // };
-
-  // spinner animation...?
 
   quizCardTemplate.style.display = "flex";
 }
@@ -52,8 +38,7 @@ function prepareQuiz(data) {
   const names = data.map((item) => item.breeds[0].name);
   const groups = data.map((item) => item.breeds[0].breed_group);
 
-  // names = shuffleArray(names);
-  names.sort();
+  names.sort(); // to shuffle original order from api
 
   const quiz = {
     answer: {
@@ -91,11 +76,6 @@ async function handleReload() {
   });
   feedbackMessage.innerHTML = "";
   handleQuizUpdate();
-
-  // const newQuizData = await fetchBreedForQuiz();
-  // console.log("newQuizData");
-  // console.log(newQuizData);
-  // renderQuiz(newQuizData);
 }
 
 document.addEventListener("DOMContentLoaded", async () => {
