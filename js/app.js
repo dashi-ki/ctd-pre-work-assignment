@@ -21,7 +21,6 @@ async function initializeApp() {
 
   groups = await loadBreeds();
   setActiveLink(dogLink);
-  console.log(groups);
 }
 
 async function loadBreeds() {
@@ -34,32 +33,6 @@ async function loadBreeds() {
   setActiveButton(firstGroup);
 
   return groups;
-}
-
-function renderBreeds(selected, groups) {
-  console.log("renderBreeds", selected);
-  const list = document.getElementById("breed-list");
-  list.innerHTML = ""; // clear current context
-
-  const breeds = groups[selected] || [];
-  breeds.forEach((breed) => {
-    const breedItem = createBreedItem(breed);
-    list.appendChild(breedItem);
-  });
-}
-
-function populateBreedGroupButtons(groups) {
-  const breedGroupButtonsDiv = document.getElementById("breed-group-buttons");
-
-  for (const group in groups) {
-    const button = createBreedGroupButton(group);
-    button.addEventListener("click", (event) => {
-      const selected = event.target.textContent;
-      renderBreeds(selected, groups);
-      setActiveButton(selected);
-    });
-    breedGroupButtonsDiv.appendChild(button);
-  }
 }
 
 function switchTo(section) {
