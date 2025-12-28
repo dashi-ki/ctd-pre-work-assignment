@@ -1,0 +1,19 @@
+{
+  "name": "pre-work-assignment-for-advanced-class",
+  "version": "1.0.0",
+  "description": "This project serves as the pre-work assignment for the Advanced React class with [Code the Dream](https://codethedream.org/about/), a non-profit organization dedicated to providing tech education to individuals from diverse backgrounds. The aim of this project is to showcase proficiency in HTML, CSS, and JavaScript.  The [requirements](https://codethedream.org/open-adv-pre-work/) were outlined by Code the Dream.",
+  "main": "index.html",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "devDependencies": {
+    "vite": "^7.3.0"
+  }
+}

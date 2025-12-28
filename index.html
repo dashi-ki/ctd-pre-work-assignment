@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>Dog Breeds</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Language" content="en" />
+    <link
+      rel="icon"
+      href="assets/icons8-dog-ios-17-filled-32.png"
+      type="image/x-icon"
+    />
+
+    <!-- Roboto Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- TODO: add meta tags -->
+    <link rel="stylesheet" href="css/index.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Explore Dog Breeds</h1>
+      <h2>Learn about various dog breeds and their characteristic.</h2>
+      <nav>
+        <ul class="menu">
+          <li><a id="breeds-link" class="nav-link active">Breeds</a></li>
+          <li><a id="quiz-link" class="nav-link">Dog Trivia</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="page-section" id="breeds-section" style="display: block">
+        <div class="content">
+          <div id="breed-group-buttons">
+            <h3>Groups:</h3>
+          </div>
+          <ul id="breed-list" class="card-container"></ul>
+        </div>
+      </section>
+      <section class="page-section-quiz" id="quiz-section">
+        <div class="content">
+          <div class="quiz-card" id="quiz-card-template">
+            <img id="quiz-image" src="" alt="Dog Image" />
+            <div class="quiz-content">
+              <div class="quiz-answers">
+                <button class="quiz-button" id="answer-1"></button>
+                <button class="quiz-button" id="answer-2"></button>
+                <button class="quiz-button" id="answer-3"></button>
+              </div>
+              <p id="feedback-message"></p>
+              <button id="reload-button">
+                <img
+                  src="assets/icons-refresh.svg"
+                  alt="Reload icon"
+                  class="icon"
+                />Reload
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script type="module" src="js/index.js"></script>
+  </body>
+</html>
