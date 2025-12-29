@@ -15,14 +15,15 @@ This project allows users to explore various dog breeds and participate in a dog
 
 Follow these instructions to get a copy of the project up and running on your local machine for development and testing purposes:
 
-**Prerequisites** You need an API key from [The Dog API](https://thedogapi.com). Sign up and get your API key.
+**Prerequisites:**
+
+- Node.js 20 or higher (check with `node -v`)
+- An API key from [The Dog API](https://thedogapi.com) — Sign up and get your API key
 
 1. Clone the repository
 2. Navigate to the project directory
 3. Install dependencies: `npm install`
-4. Copy `.env.example` to `.env` and add your personal API key:
-   cp .env.example .env
-   # Then edit .env and add your actual API key
+4. Copy `.env.example` to `.env` and add your personal API key.
 5. Run the development server: `npm run dev`
 6. Open `http://localhost:5173` in your browser
 
